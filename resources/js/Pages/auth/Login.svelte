@@ -1,0 +1,11 @@
+<form action="/login" method="POST">
+  <label>
+    Username or E-Mail
+    <input type="text" name="uid" />
+  </label>
+  <label>
+    Password
+    <input type="password" name="password" />
+  </label>
+  <button type="submit">Login</button>
+</form>

@@ -1,0 +1,7 @@
+{
+  "assets/app.css": "http://localhost:8080/assets/app.css",
+  "assets/app.js": "http://localhost:8080/assets/app.js",
+  "assets/resources_js_Pages_Home_svelte.js": "http://localhost:8080/assets/resources_js_Pages_Home_svelte.js",
+  "assets/resources_js_Pages_auth_Register_svelte.js": "http://localhost:8080/assets/resources_js_Pages_auth_Register_svelte.js",
+  "assets/resources_js_Pages_auth_Login_svelte.js": "http://localhost:8080/assets/resources_js_Pages_auth_Login_svelte.js"
+}
