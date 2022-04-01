@@ -1,76 +1,190 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
 
-html, body {
-  background-color: #F7F8FA;
-  font-family: 'Poppins', sans-serif;
-  height: 100vh;
-  color: #46444c;
-  position: relative;
+:root {
+  --clr-100: #fcfbfc;
+  --clr-300: #f5f4fd;
+  --clr-500: #605075;
+  --clr-700: #313d5a;
+  --clr-900: #183642;
 }
 
-body:before {
-  content: '';
-  background: #5A45FF;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 6px;
-  position: absolute;
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-* {
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
   margin: 0;
-  padding: 0;
 }
 
-a {
-  color: #5A45FF;
-  text-decoration: none;
-}
-
-main {
-  max-width: 620px;
-  margin: auto;
-  height: 100vh;
-  padding: 0 30px;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
-.title {
-  font-size: 50px;
-  line-height: 50px;
-  margin-bottom: 10px;
-  color: #17161A;
-}
-
-.subtitle {
-  font-size: 26px;
-  margin-bottom: 40px;
-}
-
-p {
-  margin-bottom: 20px;
-}
-
-main ul {
+/* RESET */
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
   list-style: none;
 }
 
-main li {
-  margin-bottom: 5px;
-  position: relative;
-  padding-left: 25px;
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
 }
 
-main li:before {
-  content: '—';
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 400;
+  background-color: var(--clr-300);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--clr-900);
+  line-height: 1.1;
+}
+
+h1 {
+  font-weight: 700;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  margin-block: 0.5rem;
+}
+
+/* UTILS */
+
+.container {
+  width: min(80ch, 100vw - 2rem);
+  min-height: 100vh;
+  margin-inline: auto;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* MENU */
+.menu {
+  position: fixed;
+  inset: 0;
+  background: var(--clr-900);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+.menu-title {
+  color: var(--clr-100);
+}
+.menu-item {
+  color: var(--clr-100);
+  text-decoration: none;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+}
+.menu-item:hover,
+.menu-item:focus {
+  text-decoration: underline;
+}
+
+.close {
   position: absolute;
-  left: 0;
+  top: 0rem;
+  right: 1rem;
+  cursor: pointer;
+  color: var(--clr-100);
+  font-size: 2rem;
+  font-weight: 500;
+  background: none;
+  border: none;
 }
 
-main code {
-  font-size: 16px;
-  background: #e6e2ff;
+/* CARDS */
+
+.card-grid * + * {
+  margin-top: 1rem;
+}
+
+.card {
+  background-color: var(--clr-100);
+  padding: 1rem;
+}
+
+.card-title {
+  text-align: center;
+}
+.card-title a {
+  color: var(--clr-900);
+  font-size: 1.4rem;
+  font-weight: 500;
 }

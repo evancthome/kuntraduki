@@ -2,6 +2,21 @@
   "assets/app.css": "http://localhost:8080/assets/app.css",
   "assets/app.js": "http://localhost:8080/assets/app.js",
   "assets/resources_js_Pages_Home_svelte.js": "http://localhost:8080/assets/resources_js_Pages_Home_svelte.js",
+  "assets/resources_js_Pages_auth_Login_svelte.js": "http://localhost:8080/assets/resources_js_Pages_auth_Login_svelte.js",
   "assets/resources_js_Pages_auth_Register_svelte.js": "http://localhost:8080/assets/resources_js_Pages_auth_Register_svelte.js",
-  "assets/resources_js_Pages_auth_Login_svelte.js": "http://localhost:8080/assets/resources_js_Pages_auth_Login_svelte.js"
+  "assets/resources_js_Pages_documents_Document_svelte.js": "http://localhost:8080/assets/resources_js_Pages_documents_Document_svelte.js",
+  "assets/resources_js_Pages_projects_Document_svelte.js": "http://localhost:8080/assets/resources_js_Pages_projects_Document_svelte.js",
+  "assets/resources_js_Pages_projects_Project_svelte.js": "http://localhost:8080/assets/resources_js_Pages_projects_Project_svelte.js",
+  "assets/resources_js_Pages_projects_Projects_svelte.js": "http://localhost:8080/assets/resources_js_Pages_projects_Projects_svelte.js",
+  "assets/resources_js_Pages_snippets_CreateSnippet_svelte.js": "http://localhost:8080/assets/resources_js_Pages_snippets_CreateSnippet_svelte.js",
+  "assets/resources_js_Pages_documents_Document_svelte.css": "http://localhost:8080/assets/resources_js_Pages_documents_Document_svelte.css",
+  "assets/resources_js_Pages_Home_svelte.css": "http://localhost:8080/assets/resources_js_Pages_Home_svelte.css",
+  "assets/vendors-node_modules_svelte_transition_index_mjs.js": "http://localhost:8080/assets/vendors-node_modules_svelte_transition_index_mjs.js",
+  "assets/resources_js_Pages_projects_Projects_svelte.css": "http://localhost:8080/assets/resources_js_Pages_projects_Projects_svelte.css",
+  "assets/resources_js_Pages_projects_Document_svelte-resources_js_components_Hamburger_svelte.css": "http://localhost:8080/assets/resources_js_Pages_projects_Document_svelte-resources_js_components_Hamburger_svelte.css",
+  "assets/resources_js_Pages_projects_Document_svelte-resources_js_components_Hamburger_svelte.js": "http://localhost:8080/assets/resources_js_Pages_projects_Document_svelte-resources_js_components_Hamburger_svelte.js",
+  "assets/resources_js_components_Hamburger_svelte.css": "http://localhost:8080/assets/resources_js_components_Hamburger_svelte.css",
+  "assets/resources_js_Pages_projects_Document_svelte-resources_js_Pages_projects_Project_svelte-resour-715f99.css": "http://localhost:8080/assets/resources_js_Pages_projects_Document_svelte-resources_js_Pages_projects_Project_svelte-resour-715f99.css",
+  "assets/resources_js_Pages_projects_Document_svelte-resources_js_Pages_projects_Project_svelte-resour-715f99.js": "http://localhost:8080/assets/resources_js_Pages_projects_Document_svelte-resources_js_Pages_projects_Project_svelte-resour-715f99.js",
+  "assets/resources_js_Pages_projects_Project_svelte-resources_js_components_Hamburger_svelte.css": "http://localhost:8080/assets/resources_js_Pages_projects_Project_svelte-resources_js_components_Hamburger_svelte.css"
 }

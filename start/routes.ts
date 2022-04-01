@@ -20,11 +20,29 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.get('/', async ({ inertia }) => {
-  return inertia.render('Home', { text: 'Hello World!' })
-})
+Route.get('/', 'ProjectsController.projectsShowLatest')
 
-Route.get('register', 'AuthController.registerShow').as('auth.register.show')
-Route.post('register', 'AuthController.register').as('auth.register')
-Route.get('login', 'AuthController.loginShow').as('auth.login.show')
-Route.post('login', 'AuthController.login').as('auth.login')
+Route.get('register', 'AuthController.registerShow')
+Route.post('register', 'AuthController.register')
+Route.get('login', 'AuthController.loginShow')
+Route.post('login', 'AuthController.login')
+Route.get('logout', 'AuthController.logout')
+
+Route.get('projects/:id/create', 'DocumentsController.showCreateDocument')
+Route.post('projects/:id/create', 'DocumentsController.createDocument')
+
+Route.get('projects', 'ProjectsController.projectsShow')
+Route.get('projects/:id', 'ProjectsController.projectShow')
+Route.post('projects', 'ProjectsController.projectCreate')
+Route.post('projects/:id/update', 'ProjectsController.projectUpdate')
+Route.get('projects/:id/delete', 'ProjectsController.projectDelete')
+
+Route.get('documents/:id', 'DocumentsController.showDocument')
+Route.get('documents/:id/delete', 'DocumentsController.deleteDocument')
+Route.post('documents/:id/createsnippet', 'SnippetsController.snippetCreate')
+
+Route.get('snippets/:id/translate', 'TSnippetsController.showTSnippet')
+Route.post('snippets/:id/translate', 'TSnippetsController.createTSnippet')
+Route.get('snippets/:id/delete', 'SnippetsController.snippetDelete')
+
+Route.get('/tsnippets/:id/iscorrect', 'TSnippetsController.markCorrect')

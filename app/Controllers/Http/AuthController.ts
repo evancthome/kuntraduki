@@ -28,20 +28,25 @@ export default class AuthController {
     return response.redirect('/')
   }
 
-  public async loginShow({ inertia }) {
-    return inertia.render('auth/Login')
+  public async loginShow({ inertia, session }) {
+    return inertia.render('auth/Login', { flashMessages: session.flashMessages })
   }
 
   public async login({ request, response, auth, session }: HttpContextContract) {
-    const { uid, password } = request.only(['uid', 'password'])
+    const { uid, password, remember } = request.only(['uid', 'password', 'remember'])
 
     try {
-      await auth.attempt(uid, password)
+      await auth.attempt(uid, password, remember)
     } catch (error) {
       session.flash('form', 'Your username, email, or password is incorrect')
       return response.redirect().back()
     }
 
+    return response.redirect('/')
+  }
+
+  public async logout({ response, auth }: HttpContextContract) {
+    await auth.logout()
     return response.redirect('/')
   }
 }
